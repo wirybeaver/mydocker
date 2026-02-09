@@ -1,0 +1,28 @@
+# Git files
+.git
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.pyc
+__pycache__
+*.pyo
+*.pyd
+.Python
+
+# Logs
+*.log

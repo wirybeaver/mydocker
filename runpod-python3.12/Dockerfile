@@ -37,6 +37,11 @@ COPY .gitconfig /root/.gitconfig
 # 7. Create an initialization script to handle persistent environment setup
 # This script runs every time the container starts
 RUN echo '#!/bin/bash\n\
+echo "Starting RunPod services (SSH, Jupyter)..."\n\
+# Start RunPod base services in background\n\
+/start.sh &\n\
+# Wait for services to initialize\n\
+sleep 2\n\
 echo "Initializing persistent environment..." \n\
 export PATH="/root/.local/bin:$PATH"\n\
 # Automatically install Python 3.12 to the persistent directory if missing\n\
@@ -52,7 +57,9 @@ uv python install 3.12\n\
 #    echo "Installing SGLang and dependencies..."\n\
 #    uv pip install "sglang[all]" flashinfer\n\
 #fi\n\
-exec zsh' > /usr/local/bin/entrypoint.sh && chmod +x /usr/local/bin/entrypoint.sh
+echo "Container ready! SSH and Jupyter are running."\n\
+# Keep container running and wait for background services\n\
+wait' > /usr/local/bin/entrypoint.sh && chmod +x /usr/local/bin/entrypoint.sh
 
 # 8. Set working directory to the persistent volume
 WORKDIR /workspace

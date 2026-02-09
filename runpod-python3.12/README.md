@@ -4,11 +4,10 @@ Custom Docker image for Runpod with PyTorch and ML development tools.
 
 ## Features
 
-- Based on Runpod's PyTorch 2.1.0 image (Python 3.10, CUDA 11.8)
+- Based on Runpod's PyTorch image
 - Zsh with Oh My Zsh
 - Custom .zshrc with useful aliases and functions
 - Git configuration
-- Pre-installed packages: jupyter, numpy, pandas, matplotlib, scikit-learn, wandb
 
 ## Building
 

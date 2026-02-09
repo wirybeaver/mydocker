@@ -6,8 +6,8 @@ A centralized repository for managing multiple custom Docker images for Runpod.
 
 ### runpod-python3.12
 PyTorch-based image with ML/AI development environment
-- **Base**: runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04
-- **Features**: Zsh, Oh My Zsh, common ML packages (numpy, pandas, matplotlib, etc.)
+- **Base**: a runpod/pytorch image
+- **Features**: essential tools, Zsh, Oh My Zsh, uv
 - **Location**: `runpod-python3.12/`
 
 ## Repository Structure
@@ -62,16 +62,6 @@ To add a new custom image:
 2. Add Dockerfile and configuration files
 3. Copy and modify the build script
 4. Update this README
-
-## Git Workflow
-
-Initialize the repository:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: Runpod custom Docker images"
-```
 
 ## Customization
 

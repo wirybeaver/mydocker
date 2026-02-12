@@ -1,5 +1,5 @@
-# 1. Base Image: RunPod official PyTorch image for maximum CUDA compatibility
-FROM runpod/pytorch:1.0.2-cu1281-torch280-ubuntu2404
+# 1. Base Image: RunPod official PyTorch image with CUDA 12.4.1
+FROM runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04
 
 # 2. Environment Variables
 ENV DEBIAN_FRONTEND=noninteractive
@@ -45,5 +45,5 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 # 8. Set working directory to the persistent volume
 WORKDIR /workspace
 
-# Use the script as the entrypoint to ensure the environment is ready on every boot
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+# Use the script as the container's default command
+CMD ["/usr/local/bin/entrypoint.sh"]

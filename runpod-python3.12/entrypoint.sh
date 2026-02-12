@@ -6,8 +6,7 @@ echo "Starting RunPod services (SSH, Jupyter)..."
 sleep 2
 echo "Initializing persistent environment..."
 export PATH="/root/.local/bin:$PATH"
-# Automatically install Python 3.12 to the persistent directory if missing
-uv python install 3.12
+
 # Create a virtual environment in /workspace if it does not exist
 # if [ ! -d "/workspace/venv_uv" ]; then
 #    echo "Creating venv with Python 3.12..."

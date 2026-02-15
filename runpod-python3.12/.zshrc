@@ -74,6 +74,8 @@ source $ZSH/oh-my-zsh.sh
 # setopt PROMPT_SUBST
 # PROMPT='%F{cyan}%n@%m%f:%F{green}%~%f%F{yellow}${vcs_info_msg_0_}%f$ '
 
+export UV_CACHE_DIR=/workspace/.uv_cache
+
 alias gvv='git branch -vv'
 alias gcne='GIT_COMMITTER_DATE="$(date)" git commit --amend --no-edit --date "$(date)"'
 alias gce='GIT_COMMITTER_DATE="$(date)" git commit --amend --date "$(date)"'

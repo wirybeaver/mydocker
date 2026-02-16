@@ -12,9 +12,11 @@ ENV UV_CACHE_DIR="/workspace/.uv_cache"
 RUN apt-get update && apt-get install -y \
     sudo \
     git \
+    git-lfs \
     curl \
     wget \
     vim \
+    less \
     tmux \
     htop \
     zip \

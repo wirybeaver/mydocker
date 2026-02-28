@@ -45,7 +45,7 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # 8. Set working directory to the persistent volume
-WORKDIR /workspace
+# WORKDIR /workspace
 
 # Use the script as the container's default command
 CMD ["/usr/local/bin/entrypoint.sh"]

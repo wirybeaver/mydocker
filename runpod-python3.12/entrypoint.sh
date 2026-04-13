@@ -8,11 +8,11 @@ echo "Initializing persistent environment..."
 export PATH="/root/.local/bin:$PATH"
 
 # Create a virtual environment in /workspace if it does not exist
-# if [ ! -d "/workspace/venv_uv" ]; then
+# if [ ! -d "/workspace/uvenv" ]; then
 #    echo "Creating venv with Python 3.12..."
-#    uv venv /workspace/venv_uv --python 3.12
+#    uv venv /workspace/uvenv --python 3.12
 # fi
-#source /workspace/venv_uv/bin/activate
+#source /workspace/uvenv/bin/activate
 # Install SGLang if not already present in the venv
 # if ! python -c "import sglang" &> /dev/null; then
 #    echo "Installing SGLang and dependencies..."
